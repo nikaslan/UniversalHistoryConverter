@@ -35,9 +35,7 @@ namespace UniversalHistoryConverter
 
         static void ConvertMtToCtrader(string filePath)
         {
-            // placeholder
-            Console.WriteLine("converted");
-
+            
             //actual convert
 
             string resultPath = "results.csv";  // path for resulting file
@@ -48,6 +46,8 @@ namespace UniversalHistoryConverter
                 {
                     string readLine;
                     string writeLine;
+
+                    Console.WriteLine("Converting");
 
                     sw.WriteLine("TimeFrame,Timestamp,Open,High,Low,Close,Volume"); // correct header
                     while ((readLine = sr.ReadLine()) != null)
@@ -71,6 +71,7 @@ namespace UniversalHistoryConverter
 
                         }                        
                     }
+                    Console.WriteLine("Completed");
                 }
                                 
             }
